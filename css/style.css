@@ -85,7 +85,11 @@
             line-height: 1.5;
         }
 
+<<<<<<< HEAD
         button, input[type=submit]{
+=======
+        button, .cta-btn, .cta-btn-secondary{
+>>>>>>> 1deb15e4a7fdb94f6e464661417a3814b95a40ee
             padding: 8px 24px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
@@ -94,6 +98,22 @@
             color: #fff;
             height: 4em;
             width: 10em;
+        }
+
+        .cta-btn{
+
+            text-decoration: none;
+            text-align: center;
+            padding-top: 18px;
+        }
+        .cta-btn-secondary{
+            background-color: white;
+            border: 1px solid var(--heading-primary-color);
+            color:var(--heading-primary-color);
+        }
+        .cta-btn-primary{
+            border: none;
+            color:#fff;
         }
 
         body{ /* added for centering */
