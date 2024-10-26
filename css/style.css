@@ -57,6 +57,15 @@
             margin-bottom: 4px;
             font-size: var(--secondary-fontSize);
         }
+
+        h4{
+            font-family: var(--heading-secondary-fontFamily);
+            color: var(--heading-secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 4px;
+        }
+
         p{
             font-family: var(--body-text-normal-fontFamily);
             color: var(--body-text-color);
@@ -66,12 +75,62 @@
             font-size: var(--body-text-fontSize);
             line-height: 1.5;
         }
+        a{
+            font-family: var(--body-text-normal-fontFamily);
+            color: var(--body-text-color);
+            font-weight: 400;
+            letter-spacing: 0.9px;
+            margin-bottom: 4px;
+            font-size: 1em; /*match size as all text */
+            line-height: 1.5;
+        }
 
-        button{
+<<<<<<< HEAD
+        button, input[type=submit]{
+=======
+        button, .cta-btn, .cta-btn-secondary{
+>>>>>>> 1deb15e4a7fdb94f6e464661417a3814b95a40ee
             padding: 8px 24px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
             font-size: var(--btn-fontSize);
+            background-color: var(--heading-primary-color);
+            color: #fff;
+            height: 4em;
+            width: 10em;
+        }
+
+        .cta-btn{
+
+            text-decoration: none;
+            text-align: center;
+            padding-top: 18px;
+        }
+        .cta-btn-secondary{
+            background-color: white;
+            border: 1px solid var(--heading-primary-color);
+            color:var(--heading-primary-color);
+        }
+        .cta-btn-primary{
+            border: none;
+            color:#fff;
+        }
+
+        body{ /* added for centering */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        label{
+            font-family: var(--heading-primary-fontFamily);
+            color: var(--heading-secondary-color);
+            text-transform: uppercase;
+        }
+        input{
+            border-color: var(--heading-secondary-color);
+            border-style:solid;
         }
        /*  ===========================
           Header/Navbar sSection
@@ -99,4 +158,75 @@
     vertical-align: middle;
     text-decoration: none;
 }
+       /*  ===========================
+          Custom classes/divs
+      =========================== */
 
+.form-container{ /*entire form */
+    text-align: left;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.form-group-wrapper{ /* boxed form with border */
+    padding: 75px;
+    width: 900px;
+    margin: 10px;
+    border-color: #8b8c89;
+    border-style: solid;
+}
+
+.form-names {
+    display: flex;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form-field, .form-names{
+    flex: 1;
+}
+
+.form-checkbox{
+    display:flex;
+    text-align: right;
+    gap:5px;
+    margin-bottom: 50px;
+}
+
+.form-btn{
+    text-align: center;
+}
+
+.inputName{
+    width: 14em; /*max number I could use without first and name being on seperate lines */
+    margin-top: 0.3em;
+    margin-right: 10px;
+}
+
+input{
+  width: 100%;
+  height: 2em;
+}
+
+input[type="checkbox"]{
+    width: 2em;
+    height: 2em;
+  }
+
+label{
+    display:flex;
+    width: 30%; /* Width 30% so the labels are all the same length */
+    margin-right: 10px;
+}
+
+.form-text{
+    text-align: center;
+    margin-bottom: 20px;
+}
