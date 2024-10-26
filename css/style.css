@@ -85,11 +85,7 @@
             line-height: 1.5;
         }
 
-<<<<<<< HEAD
         button, input[type=submit]{
-=======
-        button, .cta-btn, .cta-btn-secondary{
->>>>>>> 1deb15e4a7fdb94f6e464661417a3814b95a40ee
             padding: 8px 24px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
