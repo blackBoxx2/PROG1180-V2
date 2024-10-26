@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+/* Variables */
+:root {
+  /*  ===========================
+          Color Variables Section
+      =========================== */
+    --heading-primary-color: #274c77;
+    --heading-secondary-color: #a3cef1;
+    --body-text-color: #8b8c89;
+    --light-grey-background-color: #e7ecef;
+
+  /*  ===========================
+          Font-Families Variables Section
+      =========================== */
+      --heading-primary-fontFamily: "Roboto Mono", sans-serif;
+      --heading-secondary-fontFamily: "Roboto Flex", sans-serif;
+      --body-text-normal-fontFamily: "Outfit", sans-serif;
+      --btn-text-fontFamily: "Inter", sans-serif;
+
+      --heading-fontSize: 2.986rem;
+      --secondary-fontSize:2.088rem;
+      --body-text-fontSize: 1rem;
+      --btn-fontSize:1rem;
+       /*  ===========================
+          12-Grid system Variables Section
+      =========================== */
+      --grid-L-cols: 12;
+      --grid-L-gap: 15px;
+      --grid-L-maxWidth:1100px;
+
+}
+
+       /*  ===========================
+          Generic styles sSection
+      =========================== */
+        h1{
+            font-family: var(--heading-primary-fontFamily);
+            color: var(--heading-primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 16px;
+            font-size: var(--heading-fontSize);
+        }
+
+        h3{
+            font-family: var(--heading-secondary-fontFamily);
+            color: var(--heading-secondary-color);
+            font-weight:300;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 4px;
+            font-size: var(--secondary-fontSize);
+        }
+        p{
+            font-family: var(--body-text-normal-fontFamily);
+            color: var(--body-text-color);
+            font-weight: 400;
+            letter-spacing: 0.9px;
+            margin-bottom: 4px;
+            font-size: var(--body-text-fontSize);
+            line-height: 1.5;
+        }
+
+        button{
+            padding: 8px 24px;
+            border-radius: 5px;
+            font-family: var(--btn-text-fontFamily);
+            font-size: var(--btn-fontSize);
+        }
+       /*  ===========================
+          Header/Navbar sSection
+      =========================== */
+
+#header{
+    width: 1000px;
+    margin:0 auto;
+}
+#footer{
+    width: 1000px;
+    margin:0 auto;
+}
+.home-navbar{
+    height: 2rem;
+    width: 100%;
+    background-color: var(--light-grey-background-color);
+    text-align: center;
+}
+
+.logo{
+    font-family: var(--heading-primary-fontFamily);
+    color: var(--heading-primary-color);
+    font-weight: 700;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
