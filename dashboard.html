@@ -22,11 +22,49 @@
     <div class="grid-12">
         <div class="ncr-list">
           <section class="ncr-list-action-section">
-            <input type="search" class="ncr-list-searchbox" placeholder="Search by NCR number, Product Name, or QA Representative Name">
-            <button class="ncr-list-searchbutton">Search</button>
+            <input type="search" id="ncr-list-searchbox" placeholder="Search by NCR number, Product Name, or QA Representative Name">
+            <button class="cta-btn-secondary ncr-list-searchbutton">Search</button>
+            <div class="btn-group">
+              <a class="cta-btn cta-btn-primary ncr-list-createhbutton">Create</a>
+              <a class="cta-btn cta-btn-danger ncr-list-deletebutton">Delete</a>
+            </div>
           </section>
+          <table id="ncr-table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" name="" id=""></th>
+                <th>NCR Number</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>0000001</td>
+                <td>Doe Jane</td>
+                <td>01-01-2000</td>
+                <td>Active</td>
+                <td><a href="#">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <a href="#" >&lAarr; Previous</a>
+            <a href="#" id="currPage">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">Next &rAarr; </a>
+          </div>
         </div>
     </div>
+
     <div id="footer" class="footer mt-auto"></div>
     <!-- </div> -->
 
