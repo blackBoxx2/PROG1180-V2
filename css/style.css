@@ -86,21 +86,23 @@
         }
 
         button, input[type=submit]{
-            padding: 8px 24px;
+            padding: 10px 20px;
+            border-radius: 5px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
             font-size: var(--btn-fontSize);
             background-color: var(--heading-primary-color);
             color: #fff;
-            height: 4em;
-            width: 10em;
+            border: none;
         }
 
         .cta-btn{
 
             text-decoration: none;
             text-align: center;
-            padding-top: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+
         }
         .cta-btn-secondary{
             background-color: white;
@@ -110,6 +112,7 @@
         .cta-btn-primary{
             border: none;
             color:#fff;
+            background-color: var(--body-text-color);
         }
         .grid-12{
             max-width: 80%;
@@ -123,10 +126,10 @@
         }
         body{ /* added for centering */
             max-width: 100%;
-            text-align: center;
+            /* text-align: center;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; */
             margin: 0 auto;
         }
         label{
@@ -181,6 +184,7 @@
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
+    margin: 0 auto;
 }
 
 .form-group-wrapper{ /* boxed form with border */
