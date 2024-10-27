@@ -92,8 +92,6 @@
             font-size: var(--btn-fontSize);
             background-color: var(--heading-primary-color);
             color: #fff;
-            height: 4em;
-            width: 10em;
         }
 
         .cta-btn{
@@ -111,15 +109,6 @@
         .cta-btn-primary{
             border: none;
             color:#fff;
-        }
-
-        body{ /* added for centering */
-            /*text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            */
         }
         label{
             font-family: var(--heading-primary-fontFamily);
