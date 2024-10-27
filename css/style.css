@@ -98,22 +98,32 @@
 
 
         .cta-btn{
-
+            height: 2rem;
             text-decoration: none;
-            text-align: center;
             padding: 10px 20px;
             border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
 
+        }
+       
+        .cta-btn-primary{
+            border: none;
+            color:#fff;
+            background-color: var(--body-text-color);
         }
         .cta-btn-secondary{
             background-color: white;
             border: 1px solid var(--heading-primary-color);
             color:var(--heading-primary-color);
         }
-        .cta-btn-primary{
-            border: none;
+        .cta-btn-danger{
+            background-color: rgb(223, 35, 35);
             color:#fff;
-            background-color: var(--body-text-color);
+            border: none;
         }
         .grid-12{
             max-width: 80%;
