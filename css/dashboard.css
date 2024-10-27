@@ -1,0 +1,29 @@
+.ncr-list{
+    background-color: var(--light-grey-background-color);
+    grid-column: 1/13;
+}
+
+.ncr-list-action-section{
+    display: flex;
+    padding: 1rem 0.5rem;
+    width: 100%;
+
+}
+
+.ncr-list-searchbox
+{
+    max-width: 520px;
+    border-radius: 5px;
+    padding: 4px 4px ;
+    font-size: 0.8rem;
+    height: 2rem;
+    outline: none;
+    border: 1px solid var(--heading-secondary-color);
+}
+
+.ncr-list-searchbutton{
+    height: 2rem;
+    padding: 2px 10px 25px 5px;
+    width: 5rem;
+    margin-left:  0.7rem;
+}

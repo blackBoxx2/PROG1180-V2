@@ -50,7 +50,6 @@ input[type="file"]:hover, input[type="file"]::file-selector-button:hover{
     grid-column: 2;
 }
 
-
 .item1, .item2, div{
     margin: auto;
 }

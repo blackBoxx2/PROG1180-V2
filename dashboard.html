@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML = data;
+
+            document.title = "Dashboard"
+
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = './css/dashboard.css';
+            document.head.appendChild(link);
+          });
+      </script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="top-bar"></div>
+    <div id="header"></div>
+    <div class="grid-12">
+        <div class="ncr-list">
+          <section class="ncr-list-action-section">
+            <input type="search" class="ncr-list-searchbox" placeholder="Search by NCR number, Product Name, or QA Representative Name">
+            <button class="ncr-list-searchbutton">Search</button>
+          </section>
+        </div>
+    </div>
+    <div id="footer" class="footer mt-auto"></div>
+    <!-- </div> -->
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+        fetch("home-header.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+</body>
+</html>
