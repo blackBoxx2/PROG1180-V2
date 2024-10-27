@@ -44,6 +44,8 @@
 #ncr-table{
     padding: 1rem 0.5rem;
     width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 #ncr-table th,td{
     padding: 1rem 0.5rem;
@@ -68,7 +70,10 @@ td{
     font-family: var(--heading-primary-fontFamily);
     border-bottom: 1px solid var(--light-grey-background-color);
 }
-
+tbody tr:nth-last-child(even)
+{
+    background-color: var(--light-grey-background-color);
+}
 input[type=checkbox]:checked
 {
     background-color: var(--heading-secondary-color);
