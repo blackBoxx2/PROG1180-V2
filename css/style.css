@@ -178,6 +178,7 @@ justify-content: flex-start;
     gap: 30px;
 }
 
+/* MAIN HEADER  */
 #main-navbar a{
     margin: 0;
 }
@@ -231,6 +232,7 @@ justify-content: flex-start;
     font-weight: 700;
     vertical-align: middle;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 

@@ -70,7 +70,10 @@ td{
     font-family: var(--heading-primary-fontFamily);
     border-bottom: 1px solid var(--light-grey-background-color);
 }
-
+tbody tr:nth-last-child(even)
+{
+    background-color: var(--light-grey-background-color);
+}
 input[type=checkbox]:checked
 {
     background-color: var(--heading-secondary-color);
