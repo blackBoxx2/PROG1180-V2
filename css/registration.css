@@ -1,8 +1,6 @@
 
 fieldset{
     padding: 2.5rem; 
-    border: 2px solid var(--body-text-color);
-    border-radius: 0.5rem;
     margin-top: 2rem;
 }
 

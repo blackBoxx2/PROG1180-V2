@@ -16,9 +16,7 @@ label{
 
 #log-in-form{
     grid-column: 4/10;
-    border: 3px solid var(--light-grey-background-color);
     padding:  1rem 0.8rem;
-    border-radius: 5px;
     display: grid;
     grid-template-columns: 2fr 6fr;
     row-gap: 1rem;
