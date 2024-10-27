@@ -85,7 +85,7 @@
             line-height: 1.5;
         }
 
-        button, .cta-btn, .cta-btn-secondary{
+        button, input[type=submit]{
             padding: 8px 24px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
