@@ -3,8 +3,8 @@ fieldset{
     padding: 2.5rem; 
     border: 2px solid var(--body-text-color);
     border-radius: 0.5rem;
-    margin-top: 2rem;
 }
+
 
 label{   
     font-family: var(--heading-secondary-fontFamily);
@@ -30,8 +30,19 @@ input[type="file"]:hover, input[type="file"]::file-selector-button:hover{
 }
 
 .btn-Cancel{
+    margin:auto auto 22px auto;
+}
+
+.btn-Warning{
     background-color: #C00F0C;
-    
+}
+
+.btn-group{
+    grid-template-columns: 1fr 1fr;
+}
+
+.title-group{
+    grid-template-columns: 3fr 1fr;
 }
 
 .btn-group{
@@ -42,15 +53,7 @@ input[type="file"]:hover, input[type="file"]::file-selector-button:hover{
     width: 100%;
 }
 
-.item1 {
-    grid-column: 1;
-}
-
-.item2 {
-    grid-column: 2;
-}
-
-.item1, .item2, div{
+div{
     margin: auto;
 }
 
