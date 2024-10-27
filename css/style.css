@@ -88,13 +88,14 @@
         button, input[type=submit]{
             padding: 10px 20px;
             border-radius: 5px;
-            border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
             font-size: var(--btn-fontSize);
             background-color: var(--heading-primary-color);
             color: #fff;
             border: none;
         }
+
+
 
         .cta-btn{
 
@@ -126,21 +127,13 @@
         }
         body{ /* added for centering */
             max-width: 100%;
-            /* text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center; */
             margin: 0 auto;
         }
-        label{
-            font-family: var(--heading-primary-fontFamily);
-            color: var(--heading-primary-color);
-            text-transform: uppercase;
-        }
-        input{
+
+        /* input{
             border-color: var(--heading-secondary-color);
             border-style:solid;
-        }
+        } */
        /*  ===========================
           Header/Navbar sSection
       =========================== */
@@ -173,76 +166,6 @@
     vertical-align: middle;
     text-decoration: none;
 }
-       /*  ===========================
-          Custom classes/divs
-      =========================== */
 
-.form-container{ /*entire form */
-    text-align: left;
-    max-width: 1000px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fff;
-    margin: 0 auto;
-}
 
-.form-group-wrapper{ /* boxed form with border */
-    padding: 75px;
-    width: 900px;
-    margin: 10px;
-    border-color: #8b8c89;
-    border-style: solid;
-}
 
-.form-names {
-    display: flex;
-}
-
-.form-field {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.form-field, .form-names{
-    flex: 1;
-}
-
-.form-checkbox{
-    display:flex;
-    text-align: right;
-    gap:5px;
-    margin-bottom: 50px;
-}
-
-.form-btn{
-    text-align: center;
-}
-
-.inputName{
-    width: 14em; /*max number I could use without first and name being on seperate lines */
-    margin-top: 0.3em;
-    margin-right: 10px;
-}
-
-input{
-  width: 100%;
-  height: 2em;
-}
-
-input[type="checkbox"]{
-    width: 2em;
-    height: 2em;
-  }
-
-label{
-    display:flex;
-    width: 30%; /* Width 30% so the labels are all the same length */
-    margin-right: 10px;
-}
-
-.form-text{
-    text-align: center;
-    margin-bottom: 20px;
-}
