@@ -7,7 +7,7 @@ fetch("view.html")
           const closeModalBtn = document.getElementById("close");
                 const modal = document.getElementById("edit-modal");
 
-                // Close modal on close button click
+
                 if (closeModalBtn) 
                 {
                     closeModalBtn.onclick = function() 
@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModalBtn = document.getElementById("close");
     const openModalBtns = document.getElementsByClassName("viewNCR");
 
-    // Open modal on button click
+
     for (let i = 0; i < openModalBtns.length; i++) {
         openModalBtns[i].onclick = function() {
-            modal.style.display = "block"; // Open the modal
+            modal.style.display = "block"; 
         };
     }
 
@@ -52,14 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
         "hideMethod": "fadeOut"
     };
 
-    // Button click event
-      // Button click event for form submission
-      $('#ncr-form').on('submit', function(e) {
-        e.preventDefault(); // Prevent form submission
-        toastr.success('Success!', 'You have successfully created a new NCR');
-    });
 
-    // Clear All button functionality
+      $('#ncr-form').on('submit', function(e) {
+        e.preventDefault(); 
+        toastr.success('Success!', 'You have successfully created a new NCR');
+
+    });
+    setTimeout(function() {
+        $('#ncr-form').off('submit').submit();
+    }, 1000);
+
     $('#btnClearAll').on('click', function() {
         $('#ncr-form')[0].reset(); // Clear all form fields
         toastr.error('Cleared!', 'All fields have been cleared');
