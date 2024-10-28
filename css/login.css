@@ -25,7 +25,7 @@ label{
 .grid-12{
     justify-content: center;
 }
-.grid-12 h1,h4{
+.grid-12 h1,h2,h4{
     grid-column: 1/-1;
     margin: 1rem auto;
 }
@@ -45,4 +45,9 @@ label{
     grid-column: 1/-1;
     display: flex;
     justify-content: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
 }
