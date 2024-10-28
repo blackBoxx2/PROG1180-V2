@@ -1,18 +1,21 @@
 function validate(){
 
-    let output = document.getElementById("invalid")
-    let form = document.querySelector("form");
     let invalid = [];
-    Array.from(form).filter((input) => input.type !== "submit" &&  input.type !== "fieldset").forEach((input) => { 
-        if(input.value.trim() == null || input.value.trim() == "") invalid.push(input.name)
+    let valid = [];
+    Array.from(document.querySelector("form")).filter((input) => input.type !== "submit" &&  input.type !== "fieldset").forEach((input) => { 
+        if(input.value.trim() == null || input.value.trim() == ""){
+            invalid.push(input.name + "Validation");
+        }
+        else{
+            valid.push(input.name + "Validation");
+        }
     });
 
     if(invalid.length > 0){
-        output.innerHTML = "The following fields cannot be empty: "
-        invalid.forEach(x => output.innerHTML += "<br>" + x) 
+        invalid.forEach(f => document.getElementById(f).innerHTML = "This field cannot be empty")  
+        valid.forEach(f => document.getElementById(f).innerHTML = null)        
         return false;
     }
-    return true;
-    
+    return true;  
 }
 

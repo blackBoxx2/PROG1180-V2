@@ -54,11 +54,13 @@
                 <div>
                     <label for="ncrNumber">NCR Number</label>
                     <input type="text" name="ncrNumber" id="ncrNumber">
+                    <div id="ncrNumberValidation" class="text-danger"></div>
                 </div>
 
                 <div>
                     <label for="product">Product</label>
-                    <input type="text" name="product" id="product">
+                    <input type="text" name="product" id="">
+                    <div id="productValidation" class="text-danger"></div>
                 </div>
 
                 <div>
@@ -67,26 +69,31 @@
                         <option value="">Choose defect</option>
                         <option value="Option1">Option1</option>
                     </select>
+                    <div id="defectValidation" class="text-danger"></div>
                 </div>
 
                 <div>
                     <label for="quantityOrdered">Total Quantity Ordered</label>
-                    <input type="number" name="quantityOrdered" id="quantityOrdered">
+                    <input type="number" name="quantityOrdered" id="">
+                    <div id="quantityOrderedValidation" class="text-danger"></div>
                 </div>
 
                 <div>
                     <label for="quantityDefective">Total Quantity Defective</label>
                     <input type="number" name="quantityDefective" id="quantityDefective">
+                    <div id="quantityDefectiveValidation" class="text-danger"></div>
                 </div>
 
                 <div>
                     <label for="orderNumber">Order Number</label>
                     <input type="number" name="orderNumber" id="orderNumber">
+                    <div id="orderNumberValidation" class="text-danger"></div>
                 </div>
 
                 <div>
                     <label class="custom-file-upload" for="picture">Photo of Defect</label>
                     <input type="file" name="picture" id="picture">
+                    <div id="pictureValidation" class="text-danger"></div>
                 </div>
 
                 <div class="button-group">
