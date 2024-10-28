@@ -51,6 +51,10 @@
     padding: 1rem 0.5rem;
 
 }
+
+#ncr-table a:hover{
+    cursor: pointer;
+}
 thead{
     background-color: var(--heading-secondary-color);
 }
