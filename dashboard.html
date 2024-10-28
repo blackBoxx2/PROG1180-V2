@@ -17,7 +17,7 @@
 
             const link2 = document.createElement('link');
             link2.rel = 'stylesheet';
-            link2.href = './css/views.css';
+            link2.href = './css/modals.css';
             document.head.appendChild(link2);
           });
       </script>
@@ -25,7 +25,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div id="header"></div>
-    <div id="edit-modal"></div>
+    <div id="modal-dialog"></div>
     <div class="grid-12">
       <div class="page-info">
         <h1>DashBoard</h1>
@@ -36,7 +36,8 @@
             <input type="search" id="ncr-list-searchbox" placeholder="Search by NCR number, Product Name, or QA Representative Name">
             <button class="cta-btn-secondary ncr-list-searchbutton">Search</button>
             <div class="btn-group">
-              <a href="./create.html" class="cta-btn cta-btn-primary ncr-list-createhbutton">Create</a>
+              <a href="./create.html" class="cta-btn cta-btn-primary ncr-list-createhbutton">Create New</a>
+              
               <a href="#" class="cta-btn cta-btn-danger ncr-list-deletebutton">Delete</a>
             </div>
           </div>
@@ -58,7 +59,7 @@
                 <td class="name">SpongeBob SquarePants</td>
                 <td>2000-01-01</td>
                 <td>Pending Approval</td>
-                <td class="action"><a class="viewNCR">Edit</a></td>
+                <td class="action"><a class="viewNCR">View</a> <a class="editNCR">Edit</a></td>
               </tr>
               <tr>
                 <td><input type="checkbox"></td>

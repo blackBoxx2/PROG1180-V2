@@ -1,33 +1,59 @@
+var EDIT_MODAL_HTML = null;
+var VIEW_MODAL_HTML = null;
 
-fetch("view.html")
-        .then((res)=> res.text())
-        .then((data) => 
-        {
-          document.getElementById("edit-modal").innerHTML = data;
-          const closeModalBtn = document.getElementById("close");
-                const modal = document.getElementById("edit-modal");
+// load modal html into variables
+fetch("_editModal.html")
+.then((res)=> res.text())
+.then((data) => 
+{
+    EDIT_MODAL_HTML = data;
+});
+
+fetch("_viewModal.html")
+.then((res)=> res.text())
+.then((data) => 
+{
+    VIEW_MODAL_HTML = data;   
+});
 
 
-                if (closeModalBtn) 
-                {
-                    closeModalBtn.onclick = function() 
-                    {
-                        modal.style.display = "none";
-                    }
-                  }
-        });
 document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("edit-modal");
-    const closeModalBtn = document.getElementById("close");
-    const openModalBtns = document.getElementsByClassName("viewNCR");
+    const modal = document.getElementById("modal-dialog");
+    const editNCRBtns = document.getElementsByClassName("editNCR");
+    const viewNCRBtns = document.getElementsByClassName("viewNCR");
 
-
-    for (let i = 0; i < openModalBtns.length; i++) {
-        openModalBtns[i].onclick = function() {
-            modal.style.display = "block"; 
-        };
-    }
-
+    //add event listeners to all edit/view buttons
+    Array.from(editNCRBtns).forEach 
+    (element => {
+        element.onclick = function() { 
+            modal.innerHTML = EDIT_MODAL_HTML;
+            modal.style.display = "block";
+            const closeModalBtn = document.getElementById("close");
+            if (closeModalBtn) 
+            {
+                closeModalBtn.onclick = function() 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        }; 
+    });
+    Array.from(viewNCRBtns).forEach 
+    (element => {
+        element.onclick = function() { 
+            modal.innerHTML = VIEW_MODAL_HTML;
+            modal.style.display = "block";
+            const closeModalBtn = document.getElementById("close");
+            if (closeModalBtn) 
+            {
+                closeModalBtn.onclick = function() 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        }; 
+    });
+    
   });
 
 
