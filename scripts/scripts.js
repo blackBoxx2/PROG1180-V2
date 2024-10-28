@@ -1,5 +1,6 @@
 var EDIT_MODAL_HTML = null;
 var VIEW_MODAL_HTML = null;
+var DELETE_MODAL_HTML = null;
 
 // load modal html into variables
 fetch("_editModal.html")
@@ -16,11 +17,20 @@ fetch("_viewModal.html")
     VIEW_MODAL_HTML = data;   
 });
 
+fetch("_deleteModal.html")
+.then((res)=> res.text())
+.then((data) => 
+{
+    DELETE_MODAL_HTML = data;   
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modal-dialog");
     const editNCRBtns = document.getElementsByClassName("editNCR");
     const viewNCRBtns = document.getElementsByClassName("viewNCR");
+    const deleteNCRBtns = document.getElementsByClassName("deleteNCR");
 
     //add event listeners to all edit/view buttons
     Array.from(editNCRBtns).forEach 
@@ -42,6 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
     (element => {
         element.onclick = function() { 
             modal.innerHTML = VIEW_MODAL_HTML;
+            modal.style.display = "block";
+            const closeModalBtn = document.getElementById("close");
+            if (closeModalBtn) 
+            {
+                closeModalBtn.onclick = function() 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        }; 
+    });
+    Array.from(deleteNCRBtns).forEach 
+    (element => {
+        element.onclick = function() { 
+            modal.innerHTML = DELETE_MODAL_HTML;
             modal.style.display = "block";
             const closeModalBtn = document.getElementById("close");
             if (closeModalBtn) 
