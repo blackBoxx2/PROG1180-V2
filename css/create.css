@@ -1,4 +1,8 @@
 
+div{
+    margin: auto;
+}
+
 fieldset{
     padding: 2.5rem; 
     border: 2px solid var(--body-text-color);
@@ -24,23 +28,21 @@ input[type="file"]:hover, input[type="file"]::file-selector-button:hover{
     cursor: pointer;
 }
 
+.btn-Cancel{
+    margin:auto auto 22px auto;
+}
 
-
-
+.button-group{
+    grid-template-columns: 1fr 1fr;
+    width: 55%;
+}
 
 .title-group{
     grid-template-columns: 3fr 1fr;
-}
-
-
-
-.title-group{
     width: 100%;
 }
 
-
-
-.title-group{
+.title-group, .button-group{
 
     display: grid;
     padding-top: 2rem;
