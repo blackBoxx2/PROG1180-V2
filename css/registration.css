@@ -1,0 +1,49 @@
+
+fieldset{
+    padding: 2.5rem; 
+    margin-top: 2rem;
+}
+
+div{
+    margin: auto;
+}
+
+input[type=Text], input[type=Number], input[type=Password]{
+    font-family: var(--heading-primary-fontFamily);
+    color: var(--body-text-color);
+    border-radius: 5px;
+    border: 2px solid var(--heading-secondary-color);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.form-names{
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    grid-template-rows: 1;
+    margin: 0.75em;
+
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem;
+}
+
+.form-field input{
+
+    width: 65%;
+
+}
+
+.form-checkbox{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+

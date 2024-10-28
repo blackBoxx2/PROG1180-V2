@@ -11,7 +11,7 @@
       =========================== */
     --heading-primary-color: #274c77;
     --heading-secondary-color: #a3cef1;
-    --body-text-color: #8b8c89;
+    --body-text-color: #274c77;
     --light-grey-background-color: #e7ecef;
 
   /*  ===========================
@@ -46,9 +46,10 @@
             letter-spacing: 0.7px;
             margin-bottom: 16px;
             font-size: var(--heading-fontSize);
+            
         }
 
-        h3{
+        h2{
             font-family: var(--heading-secondary-fontFamily);
             color: var(--heading-secondary-color);
             font-weight:300;
@@ -85,66 +86,144 @@
             line-height: 1.5;
         }
 
-<<<<<<< HEAD
         button, input[type=submit]{
-=======
-        button, .cta-btn, .cta-btn-secondary{
->>>>>>> 1deb15e4a7fdb94f6e464661417a3814b95a40ee
-            padding: 8px 24px;
+            padding: 10px 20px;
             border-radius: 5px;
             font-family: var(--btn-text-fontFamily);
             font-size: var(--btn-fontSize);
             background-color: var(--heading-primary-color);
             color: #fff;
-            height: 4em;
-            width: 10em;
+            border: none;
+        }
+        
+        form{
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
 
-        .cta-btn{
 
+        .cta-btn{
+            height: 2.5rem;
             text-decoration: none;
-            text-align: center;
-            padding-top: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
+
+        }
+       
+        .cta-btn-primary{
+            border: none;
+            color:#fff;
+            background-color: var(--body-text-color);
         }
         .cta-btn-secondary{
             background-color: white;
             border: 1px solid var(--heading-primary-color);
             color:var(--heading-primary-color);
         }
-        .cta-btn-primary{
-            border: none;
+        .cta-btn-danger{
+            background-color: #C00F0C;
             color:#fff;
+            border: none;
+        }
+        .text-danger{
+            color: #C00F0C;
+        }
+        .grid-12{
+            max-width: 80%;
+            width: 80%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            column-gap: var(--grid-L-gap);
+            margin: 2rem auto;
+        }
+        body{ /* added for centering */
+            max-width: 100%;
+            margin: 0 auto;
         }
 
-        body{ /* added for centering */
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-        label{
-            font-family: var(--heading-primary-fontFamily);
-            color: var(--heading-secondary-color);
-            text-transform: uppercase;
-        }
-        input{
+        /* input{
             border-color: var(--heading-secondary-color);
             border-style:solid;
-        }
+        } */
        /*  ===========================
           Header/Navbar sSection
       =========================== */
 
 #header{
-    width: 1000px;
+    background-color: var(--light-grey-background-color);
+    width: 100%;
     margin:0 auto;
+    height: auto;
+    border-top: 0.2rem solid  var(--heading-primary-color);
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #footer{
-    width: 1000px;
+    width: 100%;
     margin:0 auto;
 }
-.home-navbar{
+
+#main-navbar{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.page-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* MAIN HEADER  */
+#main-navbar a{
+    margin: 0;
+}
+#main-navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+    width: 30%;
+    justify-content: space-between;
+}
+#active-nav-item{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--body-text-color);
+}
+#main-navbar ul a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: var(--body-text-normal-fontFamily);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.profile{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid var(--body-text-color);
+    overflow: hidden;
+}
+#main-navbar img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#home-navbar{
     height: 2rem;
     width: 100%;
     background-color: var(--light-grey-background-color);
@@ -157,76 +236,8 @@
     font-weight: 700;
     vertical-align: middle;
     text-decoration: none;
-}
-       /*  ===========================
-          Custom classes/divs
-      =========================== */
-
-.form-container{ /*entire form */
-    text-align: left;
-    max-width: 1000px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fff;
+    font-size: 1.2rem;
 }
 
-.form-group-wrapper{ /* boxed form with border */
-    padding: 75px;
-    width: 900px;
-    margin: 10px;
-    border-color: #8b8c89;
-    border-style: solid;
-}
 
-.form-names {
-    display: flex;
-}
 
-.form-field {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.form-field, .form-names{
-    flex: 1;
-}
-
-.form-checkbox{
-    display:flex;
-    text-align: right;
-    gap:5px;
-    margin-bottom: 50px;
-}
-
-.form-btn{
-    text-align: center;
-}
-
-.inputName{
-    width: 14em; /*max number I could use without first and name being on seperate lines */
-    margin-top: 0.3em;
-    margin-right: 10px;
-}
-
-input{
-  width: 100%;
-  height: 2em;
-}
-
-input[type="checkbox"]{
-    width: 2em;
-    height: 2em;
-  }
-
-label{
-    display:flex;
-    width: 30%; /* Width 30% so the labels are all the same length */
-    margin-right: 10px;
-}
-
-.form-text{
-    text-align: center;
-    margin-bottom: 20px;
-}
