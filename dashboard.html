@@ -13,12 +13,19 @@
             link.rel = 'stylesheet';
             link.href = './css/dashboard.css';
             document.head.appendChild(link);
+
+
+            const link2 = document.createElement('link');
+            link2.rel = 'stylesheet';
+            link2.href = './css/views.css';
+            document.head.appendChild(link2);
           });
       </script>
       <title>Dashboard</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div id="header"></div>
+    <div id="edit-modal"></div>
     <div class="grid-12">
       <div class="page-info">
         <h1>DashBoard</h1>
@@ -51,7 +58,7 @@
                 <td>Doe Jane</td>
                 <td>01-01-2000</td>
                 <td>Active</td>
-                <td><a href="#">Edit</a></td>
+                <td><a class="viewNCR">Edit</a></td>
               </tr>
               <tr>
                 <td><input type="checkbox"></td>
@@ -59,7 +66,7 @@
                 <td>Sponge Bob</td>
                 <td>01-01-2000</td>
                 <td>Inactive</td>
-                <td><a href="#">Edit</a></td>
+                <td><a class="viewNCR">Edit</a></td>
               </tr>
               <tr>
                 <td><input type="checkbox"></td>
@@ -67,7 +74,7 @@
                 <td>Patrick Star</td>
                 <td>01-01-2000</td>
                 <td>Active</td>
-                <td><a href="#">Edit</a></td>
+                <td><a  class="viewNCR">Edit</a></td>
               </tr>
             </tbody>
           </table>
@@ -100,9 +107,41 @@
         .then((res) => res.text())
         .then((data) => (document.getElementById("header").innerHTML = data));
 
+        // fetch("view.html")
+        // .then((res)=> res.text())
+        // .then((data) => 
+        // {
+        //   document.getElementById("edit-modal").innerHTML = data;
+        //   const closeModalBtn = document.getElementById("close");
+        //         const modal = document.getElementById("edit-modal");
+
+        //         // Close modal on close button click
+        //         if (closeModalBtn) 
+        //         {
+        //             closeModalBtn.onclick = function() 
+        //             {
+        //                 modal.style.display = "none";
+        //             }
+        //           }
+        // });
       fetch("footer.html")
         .then((res) => res.text())
         .then((data) => (document.getElementById("footer").innerHTML = data));
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const modal = document.getElementById("edit-modal");
+        //     const closeModalBtn = document.getElementById("close");
+        //     const openModalBtn = document.getElementById("createNCR");
+
+        //     // Open modal on button click
+        //     openModalBtn.onclick = function() {
+        //         modal.style.display = "block";
+        //     };
+
+        //   }
+        // );
+         
     </script>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>
