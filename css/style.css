@@ -95,6 +95,7 @@
             color: #fff;
             border: none;
         }
+        
         form{
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -125,7 +126,7 @@
             color:var(--heading-primary-color);
         }
         .cta-btn-danger{
-            background-color: rgb(223, 35, 35);
+            background-color: #C00F0C;
             color:#fff;
             border: none;
         }
