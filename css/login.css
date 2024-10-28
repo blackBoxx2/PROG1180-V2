@@ -1,11 +1,12 @@
 input{
     padding: 10px 20px;
     border-radius: 5px;
-    border: 1px solid var(--heading-secondary-color);
+    border: 2px solid var(--heading-secondary-color);
     font-family: var(--btn-text-fontFamily);
     font-size: var(--btn-fontSize);
     color: var(--body-text-color);
     width: 80%;
+    height: 80%;
 }
 
 label{
@@ -20,12 +21,13 @@ label{
     display: grid;
     grid-template-columns: 2fr 6fr;
     row-gap: 1rem;
-
+    padding: 2rem;
 }
+
 .grid-12{
     justify-content: center;
 }
-.grid-12 h1,h2,h4{
+.grid-12 h1,h2{
     grid-column: 1/-1;
     margin: 1rem auto;
 }
