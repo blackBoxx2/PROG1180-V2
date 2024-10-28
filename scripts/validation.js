@@ -11,9 +11,9 @@ function validate(){
         }
     });
 
+    valid.forEach(f => document.getElementById(f).innerHTML = null)  
     if(invalid.length > 0){
-        invalid.forEach(f => document.getElementById(f).innerHTML = "This field cannot be empty")  
-        valid.forEach(f => document.getElementById(f).innerHTML = null)        
+        invalid.forEach(f => document.getElementById(f).innerHTML = "This field cannot be empty")        
         return false;
     }
     return true;  
