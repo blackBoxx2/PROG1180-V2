@@ -163,39 +163,9 @@
         .then((res) => res.text())
         .then((data) => (document.getElementById("header").innerHTML = data));
 
-        // fetch("view.html")
-        // .then((res)=> res.text())
-        // .then((data) => 
-        // {
-        //   document.getElementById("edit-modal").innerHTML = data;
-        //   const closeModalBtn = document.getElementById("close");
-        //         const modal = document.getElementById("edit-modal");
-
-        //         // Close modal on close button click
-        //         if (closeModalBtn) 
-        //         {
-        //             closeModalBtn.onclick = function() 
-        //             {
-        //                 modal.style.display = "none";
-        //             }
-        //           }
-        // });
       fetch("footer.html")
         .then((res) => res.text())
         .then((data) => (document.getElementById("footer").innerHTML = data));
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     const modal = document.getElementById("edit-modal");
-        //     const closeModalBtn = document.getElementById("close");
-        //     const openModalBtn = document.getElementById("createNCR");
-
-        //     // Open modal on button click
-        //     openModalBtn.onclick = function() {
-        //         modal.style.display = "block";
-        //     };
-
-        //   }
-        // );
          
     </script>
     <script src="./scripts/scripts.js"></script>
