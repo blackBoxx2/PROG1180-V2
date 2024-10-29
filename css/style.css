@@ -59,6 +59,16 @@
             font-size: var(--secondary-fontSize);
         }
 
+        h3{
+            font-family: var(--heading-primary-fontFamily);
+            color: var(--heading-primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 16px;
+            font-size: var(--secondary-fontSize);
+        }
+
         h4{
             font-family: var(--heading-secondary-fontFamily);
             color: var(--heading-secondary-color);
@@ -191,8 +201,9 @@ justify-content: flex-start;
     list-style: none;
     align-items: center;
     margin: 0;
+    gap: 1.2rem;
     margin-left: auto;
-    width: 30%;
+    width: auto;
     justify-content: space-between;
 }
 #active-nav-item{

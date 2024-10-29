@@ -2,13 +2,15 @@
     grid-column: 1/13;
 }
 
-.ncr-list-action-section{
+.ncr-list-action-section {
     background-color: var(--light-grey-background-color);
     display: flex;
     padding: 2rem 2rem;
     width: 100%;
-
+    border-radius: 2.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .btn-group{
     margin-left: auto;
 }
@@ -45,11 +47,18 @@
     padding: 1rem 0.5rem;
     width: 100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 2.5px;
 }
 #ncr-table th,td{
     padding: 1rem 0.5rem;
+}
 
+#ncr-table th:not([class*='name']), td:not([class*='name']) {
+    text-align: center;
+}
+
+#ncr-table a:hover{
+    cursor: pointer;
 }
 thead{
     background-color: var(--heading-secondary-color);
@@ -70,9 +79,12 @@ td{
     font-family: var(--heading-primary-fontFamily);
     border-bottom: 1px solid var(--light-grey-background-color);
 }
-tbody tr:nth-last-child(even)
+tbody tr:nth-last-child(odd)
 {
     background-color: var(--light-grey-background-color);
+}
+tbody tr:nth-last-child(odd) > td:not([class*='action']) {
+    border-right: 1px solid rgba(0, 0, 0, 0.075);
 }
 input[type=checkbox]:checked
 {
@@ -101,4 +113,15 @@ input[type=checkbox]:checked
     background-color: var(--heading-primary-color);
     color: #fff;
     border-radius: 50%;
+}
+
+h2 {
+    color: var(--heading-primary-color);
+    background-color: var(--light-grey-background-color);
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 0.5rem;
 }

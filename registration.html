@@ -21,46 +21,43 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <div id="header" class=""></div>
-    <div class="">
-
-        <div>
-            <h1>Create an Account</h1>
-            <h3>Already have an account? <a href="login.html">Log in</a></h3> <!--Change href to login page-->
-        </div>
-
-        <form action="#">
+    <div id="header"></div>
+    
+    <div class="grid-12">
+        <h1>Create an Account</h1>
+        <h2>Already have an account? <a href="login.html">Log in</a></h2> <!--Change href to login page-->    
+        <form id="registration-form" action="#">
 
             <fieldset class="">
                 <div class="form-names">
                     
-                        <label class="item1" for="regFirstName">First Name</label>
+                        <label class="item1" for="regFirstName">First Name:</label>
                         <input class="inputName" type="text" id="regFirstName" name="regFirstText">
                     
                     
-                        <label for="regLastName">Last Name</label>
+                        <label for="regLastName">Last Name:</label>
                         <input class="inputName" type="text" id="regLastName" name="regLastText">
                     
                 </div>
                 <div class="form-field">
-                    <label for="regEmail">Email</label>
+                    <label for="regEmail">Email:</label>
                     <input class="length" type="text" id="regEmail" name="regEmailText">
                 </div>
                 <div class="form-field">
-                    <label for="regPassword">Password</label>
+                    <label for="regPassword">Password:</label>
                     <input class="inputText" type="password" id="regPassword" name="regPasswordText">
                 </div>
                 <div class="form-field">
-                    <label for="regConfirmP">Confirm Password</label>
+                    <label for="regConfirmP">Confirm Password:</label>
                     <input class="inputText" type="password" id="regConfirmP" name="regConfirmPText">
                 </div>
                 <div class="form-field">
-                    <label for="regPhone">Phone Number</label>
+                    <label for="regPhone">Phone Number:</label>
                     <input class="inputText" type="text" id="regPhone" name="regPhoneText">
                 </div>
                 <div class="form-checkbox">
                     <input type="checkbox" id="switch" class="checkbox" required>
-                    <p>I agree to the <a href="terms-and-coniditions.html">Terms and Coniditions</a></p>
+                    <p>I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a></p>
                 </div>
                 <div class="form-checkbox">
                     <button type="submit" id="sign-up">Sign Up</button>

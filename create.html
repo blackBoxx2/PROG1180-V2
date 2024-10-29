@@ -21,6 +21,7 @@
             document.head.appendChild(toasterLink);
           });
       </script>
+      <title>Create new NCR</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -32,62 +33,72 @@
             <button onclick="window.location.href='dashboard.html'" class="cta-btn-danger btn-Cancel" id="btnCancel">Cancel</button>
         </div>
 
-        <form action="#" onsubmit="return validate()" id="ncr-form">
+        <form action="#" onsubmit="validate()" id="ncr-form">
 
             <fieldset>
 
-                <div>
-                    <label for="ncrNumber">NCR Number</label>
-                    <input type="text" name="ncrNumber" id="ncrNumber">
+                <div >
+                    <div class="inner-wrapper">
+                        <label for="ncrNumber">NCR Number</label>
+                        <input  aria-label="NCR Number" type="text" name="ncrNumber" id="ncrNumber" disabled value="0000011">
+                    </div>
                     <div id="ncrNumberValidation" class="text-danger"></div>
                 </div>
 
                 <div>
-                    <label for="product">Product</label>
-                    <input type="text" name="product" id="">
+                    <div class="inner-wrapper">
+                        <label for="product">Product</label>
+                        <input  aria-label="Product name" type="text" name="product" id="product">
+                    </div>
                     <div id="productValidation" class="text-danger"></div>
                 </div>
 
-                <div>
-                    <label for="defect">Defect Type</label>
-                    <select name="defect" id="defect">
-                        <option value="">Choose defect</option>
-                        <option value="Option1">Option1</option>
-                    </select>
+                <div class="no-validate">
+                    <div class="inner-wrapper">
+                        <label for="defect">Defect Type</label>
+                        <select  aria-label="Defect type" name="defect" id="defect">
+                            <option value="" disabled selected>Choose defect</option>
+                            <option value="Option1">Option1</option>
+                        </select>
+                    </div>
                     <div id="defectValidation" class="text-danger"></div>
                 </div>
 
                 <div>
-                    <label for="quantityOrdered">Total Quantity Ordered</label>
-                    <input type="number" name="quantityOrdered" id="">
+                    <div class="inner-wrapper">
+                        <label for="quantityOrdered">Total Quantity Ordered</label>
+                        <input  aria-label="Order quantity" type="number" name="quantityOrdered" id="quantityOrdered">
+                    </div>
                     <div id="quantityOrderedValidation" class="text-danger"></div>
                 </div>
 
                 <div>
-                    <label for="quantityDefective">Total Quantity Defective</label>
-                    <input type="number" name="quantityDefective" id="quantityDefective">
+                    <div class="inner-wrapper">
+                        <label for="quantityDefective">Total Quantity Defective</label>
+                        <input aria-label="Defective quantity" type="number" name="quantityDefective" id="quantityDefective">
+                    </div>
                     <div id="quantityDefectiveValidation" class="text-danger"></div>
                 </div>
 
                 <div>
-                    <label for="orderNumber">Order Number</label>
-                    <input type="number" name="orderNumber" id="orderNumber">
+                    <div class="inner-wrapper">
+                        <label for="orderNumber">Order Number</label>
+                        <input  aria-label="Order number" type="number" name="orderNumber" id="orderNumber">
+                    </div>
                     <div id="orderNumberValidation" class="text-danger"></div>
                 </div>
 
                 <div>
-                    <label class="custom-file-upload" for="picture">Photo of Defect</label>
-                    <input type="file" name="picture" id="picture">
+                    <div class="inner-wrapper">
+                        <label class="custom-file-upload" for="picture">Photo of Defect</label>
+                        <input  aria-label="Defect picture"  type="file" name="picture" id="picture">
+                    </div>
                     <div id="pictureValidation" class="text-danger"></div>
                 </div>
 
-                <div class="button-group">
-                    <div class="item1">
-                        <input type="submit" class="cta-btn-primary" id="btn-submit">
-                    </div>
-                    <div class="item2">
-                        <button type="button" class="cta-btn-danger" id="btnClearAll">Clear All</button>
-                    </div>
+                <div class="button-group no-validate">
+                    <button type="submit" class="cta-btn-primary" id="btn-submit">Create NCR</button>
+                    <button type="button" class="cta-btn-danger" id="btnClearAll">Clear Form</button>
                 </div>
 
             </fieldset>
@@ -102,9 +113,6 @@
     <!-- </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script>
-    
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
