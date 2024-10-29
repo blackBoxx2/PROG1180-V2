@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }; 
     });
     
-  });
+});
 
 
-  //TOASTS
-  $(document).ready(function() {
+//TOASTS
+$(document).ready(function() {
     // Toastr options
     toastr.options = {
         "closeButton": true,
@@ -104,22 +104,28 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-      $('#ncr-form').on('submit', function(e) {
+    $('#ncr-form').on('submit', function(e) {
         e.preventDefault(); 
-        toastr.success('Success!', 'You have successfully created a new NCR');
-
+        if (validate()) {
+            toastr.success('You have successfully created a new NCR! Redirecting..', 'Success!');
+            clearValidation();
+            // return user to db after 5 seconds
+            setTimeout(function() {
+                window.location.href = "dashboard.html";
+            }, 5000);
+        } else {
+            toastr.error('Please check all fields and try again', 'Error!');
+        }
     });
-    setTimeout(function() {
-        $('#ncr-form').off('submit').submit();
-    }, 1000);
 
     $('#btnClearAll').on('click', function() {
-        $('#ncr-form')[0].reset(); // Clear all form fields
-        toastr.error('Cleared!', 'All fields have been cleared');
+        $('#ncr-form')[0].reset();
+        clearValidation(); // Clear all form fields
+        toastr.error('All fields have been cleared', 'Cleared!');
     });
 
     // Cancel button event
     $('#btnCancel').on('click', function() {
-        toastr.error('Canceled!', 'You have canceled creating a new NCR');
+        toastr.error('You have canceled creating a new NCR', 'Canceled!');
     });
 });

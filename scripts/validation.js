@@ -1,21 +1,38 @@
-function validate(){
 
-    let invalid = [];
-    let valid = [];
-    Array.from(document.querySelector("form")).filter((input) => input.type !== "submit" &&  input.type !== "fieldset").forEach((input) => { 
-        if(input.value.trim() == null || input.value.trim() == ""){
-            invalid.push(input.name + "Validation");
-        }
-        else{
-            valid.push(input.name + "Validation");
+function validate() {
+    clearValidation();
+    const validated_divs = document.querySelectorAll("fieldset > div:not([class*='no-validate'])");
+    var invalid = 0;
+    validated_divs.forEach((el) => { 
+        const input = el.querySelector("input");
+        const validation_el = el.querySelector("div.text-danger");
+        if (input.value.trim() == null || input.value.trim() == "") {
+            validation_el.innerHTML = `${input.ariaLabel} cannot be empty`;
+            invalid++;
+        } else if (input.type == "number" && isNaN(input.value)) {
+            validation_el.innerHTML = `${input.ariaLabel} must be a number`;
+            invalid++;
+        } else if (input.id == "quantityDefective" && input.value > document.querySelector("#quantityOrdered").value) {
+            validation_el.innerHTML = "Quantity defective cannot be greater than quantity ordered";
+            invalid++;
         }
     });
 
-    valid.forEach(f => document.getElementById(f).innerHTML = null)  
-    if(invalid.length > 0){
-        invalid.forEach(f => document.getElementById(f).innerHTML = "This field cannot be empty")        
-        return false;
+    const defect = document.querySelector("#defect");
+    if (defect.selectedIndex <= 0) {
+        var validation_el = defect.parentElement.parentElement.querySelector("div.text-danger");
+        validation_el.innerHTML = "You must select a defect";
     }
-    return true;  
+
+    if (invalid > 0) {
+        return false 
+    }
+    return true; 
 }
 
+function clearValidation() {
+    const validation_els = document.querySelectorAll("div[id*='Validation']");
+    validation_els.forEach((input) => {
+        input.innerHTML = "";
+    });
+}
